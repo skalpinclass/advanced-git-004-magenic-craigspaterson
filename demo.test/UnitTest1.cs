@@ -12,7 +12,7 @@ namespace demo.test
         [TestInitialize]
         public void Initialize()
         {
-            random = new Random();
+            random = new Random(DateTime.Now.Millisecond);
         }
 
         [TestMethod]
@@ -21,7 +21,7 @@ namespace demo.test
             for(var i = 0; i < 1000; i++)
             {
                 var number = random.Next(0,1);
-                if (number == 1) 
+                if (number == 0) 
                 {
                     return;
                 }
